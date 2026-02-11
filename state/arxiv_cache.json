@@ -1,0 +1,155 @@
+{
+  "papers": [
+    {
+      "id": "2602.10117v1",
+      "title": "Biases in the Blind Spot: Detecting What LLMs Fail to Mention",
+      "summary": "Large Language Models (LLMs) often provide chain-of-thought (CoT) reasoning traces that appear plausible, but may hide internal biases. We call these *unverbalized biases*. Monitoring models via their stated reasoning is therefore unreliable, and existing bias evaluations typically require predefine...",
+      "url": "https://arxiv.org/abs/2602.10117v1"
+    },
+    {
+      "id": "2602.10116v1",
+      "title": "SAGE: Scalable Agentic 3D Scene Generation for Embodied AI",
+      "summary": "Real-world data collection for embodied agents remains costly and unsafe, calling for scalable, realistic, and simulator-ready 3D environments. However, existing scene-generation systems often rely on rule-based or task-specific pipelines, yielding artifacts and physically invalid scenes. We present...",
+      "url": "https://arxiv.org/abs/2602.10116v1"
+    },
+    {
+      "id": "2602.10113v1",
+      "title": "ConsID-Gen: View-Consistent and Identity-Preserving Image-to-Video Generation",
+      "summary": "Image-to-Video generation (I2V) animates a static image into a temporally coherent video sequence following textual instructions, yet preserving fine-grained object identity under changing viewpoints remains a persistent challenge. Unlike text-to-video models, existing I2V pipelines often suffer fro...",
+      "url": "https://arxiv.org/abs/2602.10113v1"
+    },
+    {
+      "id": "2602.10109v1",
+      "title": "ST4VLA: Spatially Guided Training for Vision-Language-Action Models",
+      "summary": "Large vision-language models (VLMs) excel at multimodal understanding but fall short when extended to embodied tasks, where instructions must be transformed into low-level motor actions. We introduce ST4VLA, a dual-system Vision-Language-Action framework that leverages Spatial Guided Training to ali...",
+      "url": "https://arxiv.org/abs/2602.10109v1"
+    },
+    {
+      "id": "2602.10108v1",
+      "title": "Topologically Protected Surface Altermagnetism on Antiferromagnets",
+      "summary": "Altermagnetism (AM) and its associated spin-transport phenomena are typically linked to spin-split electronic band structures in bulk materials. However, the crystal surface has a reduced symmetry with respect to the bulk, which can induce AM at the surface of conventional antiferromagnets (AFMs) --...",
+      "url": "https://arxiv.org/abs/2602.10108v1"
+    },
+    {
+      "id": "2602.10107v1",
+      "title": "Measurement of the Full Shape of the Thermal Sunyaev-Zeldovich Power Spectrum from South Pole Telescope and {\\it Herschel}-SPIRE Observations",
+      "summary": "We present a measurement of the full shape of the power spectrum of the thermal Sunyaev-Zeldovich (tSZ) effect down to arcminute scales using cosmic microwave background (CMB) data from the South Pole Telescope (SPT) over roughly 100 ${\\rm deg}^{2}$ field. The analysis incorporates data from the 201...",
+      "url": "https://arxiv.org/abs/2602.10107v1"
+    },
+    {
+      "id": "2602.10103v1",
+      "title": "Minimax properties of gamma kernel density estimators under $L^p$ loss and $\u03b2$-H\u00f6lder smoothness of the target",
+      "summary": "This paper considers the asymptotic behavior in $\u03b2$-H\u00f6lder spaces, and under $L^p$ loss, of the gamma kernel density estimator introduced by Chen [Ann. Inst. Statist. Math. 52 (2000), 471-480] for the analysis of nonnegative data, when the target's support is assumed to be upper bounded. It is shown...",
+      "url": "https://arxiv.org/abs/2602.10103v1"
+    },
+    {
+      "id": "2602.10100v1",
+      "title": "Towards Explainable Federated Learning: Understanding the Impact of Differential Privacy",
+      "summary": "Data privacy and eXplainable Artificial Intelligence (XAI) are two important aspects for modern Machine Learning systems. To enhance data privacy, recent machine learning models have been designed as a Federated Learning (FL) system. On top of that, additional privacy layers can be added, via Differ...",
+      "url": "https://arxiv.org/abs/2602.10100v1"
+    },
+    {
+      "id": "2602.10099v1",
+      "title": "Learning on the Manifold: Unlocking Standard Diffusion Transformers with Representation Encoders",
+      "summary": "Leveraging representation encoders for generative modeling offers a path for efficient, high-fidelity synthesis. However, standard diffusion transformers fail to converge on these representations directly. While recent work attributes this to a capacity bottleneck proposing computationally expensive...",
+      "url": "https://arxiv.org/abs/2602.10099v1"
+    },
+    {
+      "id": "2602.10097v1",
+      "title": "Step-resolved data attribution for looped transformers",
+      "summary": "We study how individual training examples shape the internal computation of looped transformers, where a shared block is applied for $\u03c4$ recurrent iterations to enable latent reasoning. Existing training-data influence estimators such as TracIn yield a single scalar score that aggregates over all lo...",
+      "url": "https://arxiv.org/abs/2602.10097v1"
+    },
+    {
+      "id": "2602.10091v1",
+      "title": "Simulating superconductivity in mixed-dimensional $t_\\parallel$-${J}_\\parallel$-${J}_\\perp$ bilayers with neural quantum states",
+      "summary": "Motivated by the recent discovery of superconductivity in the bilayer nickelate La$_3$Ni$_2$O$_7$ (LNO) under pressure, we study a mixed-dimensional (mixD) bilayer $t_\\parallel$-$J_\\parallel$-$J_\\perp$ model, which has been proposed as an effective low-energy description of LNO. Using neural quantum...",
+      "url": "https://arxiv.org/abs/2602.10091v1"
+    },
+    {
+      "id": "2602.10086v1",
+      "title": "Canonical strong coupling spin wave expansion of Kondo lattice magnets. II. Itinerant ferromagnets and topological magnon bands",
+      "summary": "In this paper we apply the canonical spin wave theory developed for itinerant Kondo lattice magnets in the strong coupling regime to Kondo ferromagnets, and address two general questions pertaining to their magnetic excitations. First, we compute corrections to the strong coupling (i.e., double-exch...",
+      "url": "https://arxiv.org/abs/2602.10086v1"
+    },
+    {
+      "id": "2602.10085v1",
+      "title": "CODE-SHARP: Continuous Open-ended Discovery and Evolution of Skills as Hierarchical Reward Programs",
+      "summary": "Developing agents capable of open-endedly discovering and learning novel skills is a grand challenge in Artificial Intelligence. While reinforcement learning offers a powerful framework for training agents to master complex skills, it typically relies on hand-designed reward functions. This is infea...",
+      "url": "https://arxiv.org/abs/2602.10085v1"
+    },
+    {
+      "id": "2602.10077v1",
+      "title": "An eigenvalue problem for a generalized polyharmonic operator in Orlicz-Sobolev spaces without the $\u0394_2$-condition",
+      "summary": "In this paper, we consider a generalized polyharmonic eigenvalue problem of the form $A(u)= \u03bbh(u)$ in a bounded smooth domain with Dirichlet boundary conditions in the setting of higher-order Orlicz-Sobolev spaces. Here, $A$ is a very general operator depending on $u$ and arbitrary higher-order deri...",
+      "url": "https://arxiv.org/abs/2602.10077v1"
+    },
+    {
+      "id": "2602.10076v1",
+      "title": "Orbital piezomagnetic polarizability of pure insulating altermagnets in two dimensions",
+      "summary": "The distinctive symmetry properties of pure altermagnets make them natural candidates for piezomagnetism. Previous work motivated by the piezomagnetic properties of altermagnets has primarily focused on the spin magnetization response to applied strain. In this paper we study orbital piezomagnetic e...",
+      "url": "https://arxiv.org/abs/2602.10076v1"
+    },
+    {
+      "id": "2602.10072v1",
+      "title": "SDSS-V Local Volume Mapper (LVM): Helix Nebula public data, Data Analysis Pipeline data products",
+      "summary": "We present a spatially resolved spectroscopic analysis of the Helix Nebula (NGC 7293) using data from the SDSS-V Local Volume Mapper (LVM), by applying the recently developed LVM Data Analysis Pipeline (LVM-DAP). Covering the full optical range (3600-9800 \u00c5) over a contiguous ~ 0.5 degree field, the...",
+      "url": "https://arxiv.org/abs/2602.10072v1"
+    },
+    {
+      "id": "2602.10071v1",
+      "title": "Deep Learning for Electricity Price Forecasting: A Review of Day-Ahead, Intraday, and Balancing Electricity Markets",
+      "summary": "Electricity price forecasting (EPF) plays a critical role in power system operation and market decision making. While existing review studies have provided valuable insights into forecasting horizons, market mechanisms, and evaluation practices, the rapid adoption of deep learning has introduced inc...",
+      "url": "https://arxiv.org/abs/2602.10071v1"
+    },
+    {
+      "id": "2602.10070v1",
+      "title": "Gaia white dwarfs with infrared excess I. The 100 pc catalogue",
+      "summary": "The presence of infrared excess flux observed in white dwarfs (WDs) is related to the existence of debris disks or substellar companions. These systems provide important clues in the study of extrasolar planetary material and binary evolution. However, fully characterising their properties requires ...",
+      "url": "https://arxiv.org/abs/2602.10070v1"
+    },
+    {
+      "id": "2602.10068v1",
+      "title": "Few-particle lepton bound states in variational approach",
+      "summary": "The energy levels of the ground states of the three-particle and four-particle bound states of leptons in quantum electrodynamics are calculated. For the calculation, the variational method with Gaussian basis functions is used. The hyperfine structure of the spectrum is taken into account due to th...",
+      "url": "https://arxiv.org/abs/2602.10068v1"
+    },
+    {
+      "id": "2602.10067v1",
+      "title": "Features as Rewards: Scalable Supervision for Open-Ended Tasks via Interpretability",
+      "summary": "Language models trained on large-scale datasets have been shown to learn features that encode abstract concepts such as factuality or intent. Such features are traditionally used for test-time monitoring or steering. We present an alternative affordance: features as scalable supervision for open-end...",
+      "url": "https://arxiv.org/abs/2602.10067v1"
+    },
+    {
+      "id": "2602.10066v1",
+      "title": "Programmable and nonvolatile computing with composition tuning in thin film lithium niobate",
+      "summary": "Matrix-vector multiplications are fundamental operations in artificial intelligence and high-throughput computations, and are executed repeatedly during training and inference. Their high energy cost in electronic processors motivate scalable photonic computing approaches that reduce the energy requ...",
+      "url": "https://arxiv.org/abs/2602.10066v1"
+    },
+    {
+      "id": "2602.10065v1",
+      "title": "Dark Energy Survey Year 6 Results: Cosmological Constraints from Cosmic Shear",
+      "summary": "We present legacy cosmic shear measurements and cosmological constraints using six years of Dark Energy Survey imaging data. From these data, we study ~140 million galaxies (8.29 galaxies/arcmin$^2$) that are 50% complete at i=24.0 and extend beyond z=1.2. We divide the galaxies into four redshift b...",
+      "url": "https://arxiv.org/abs/2602.10065v1"
+    },
+    {
+      "id": "2602.10064v1",
+      "title": "PySlice: Routine Vibrational Electron Energy Loss Spectroscopy Prediction with Universal Interatomic Potentials",
+      "summary": "Vibrational spectroscopy in the electron microscope can reveal phonon excitations with nanometer spatial resolution, yet routine prediction remains out of reach due to fragmented workflows requiring specialized expertise. Here we introduce PySlice, the first publicly available implementation of the ...",
+      "url": "https://arxiv.org/abs/2602.10064v1"
+    },
+    {
+      "id": "2602.10063v1",
+      "title": "Chain of Mindset: Reasoning with Adaptive Cognitive Modes",
+      "summary": "Human problem-solving is never the repetition of a single mindset, by which we mean a distinct mode of cognitive processing. When tackling a specific task, we do not rely on a single mindset; instead, we integrate multiple mindsets within the single solution process. However, existing LLM reasoning ...",
+      "url": "https://arxiv.org/abs/2602.10063v1"
+    },
+    {
+      "id": "2602.10062v1",
+      "title": "Vendi Novelty Scores for Out-of-Distribution Detection",
+      "summary": "Out-of-distribution (OOD) detection is critical for the safe deployment of machine learning systems. Existing post-hoc detectors typically rely on model confidence scores or likelihood estimates in feature space, often under restrictive distributional assumptions. In this work, we introduce a third ...",
+      "url": "https://arxiv.org/abs/2602.10062v1"
+    }
+  ],
+  "timestamp": 1770836963.0579803
+}
