@@ -1,0 +1,37 @@
+services:
+  - type: web
+    name: openclaw-agent
+    env: python
+    region: oregon
+    plan: free
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python main.py run"
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.11"
+      - key: PORT
+        value: "10000"
+      - key: ENVIRONMENT
+        value: "production"
+      - key: LOG_LEVEL
+        value: "INFO"
+      # --- Secrets (set manually in Render dashboard) ---
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: GROQ_API_KEY
+        sync: false
+      - key: NVIDIA_API_KEY
+        sync: false
+      - key: MOLTBOOK_API_KEY
+        sync: false
+      - key: ZOHO_EMAIL
+        sync: false
+      - key: ZOHO_PASSWORD
+        sync: false
+      - key: ADMIN_EMAIL
+        sync: false
+      - key: BRAVE_API_KEY
+        sync: false
+      - key: HF_API_KEY
+        sync: false
+    healthCheckPath: /health
