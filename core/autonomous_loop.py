@@ -24,6 +24,7 @@ from core.strategy_reflector import StrategyReflector
 from connectors.arxiv_scraper import ArXivScraper
 from connectors.moltbook import MoltbookConnector
 from connectors.email_connector import EmailConnector
+from connectors.agentarxiv import AgentArxivConnector
 from agents.research_agent import ResearchAgent
 from agents.literary_agent import LiteraryAgent
 
@@ -67,6 +68,10 @@ class AutonomousLoop:
                 imap_host=config.email.imap_host,
                 imap_port=config.email.imap_port,
             )
+
+        self.agentarxiv: Optional[AgentArxivConnector] = None
+        if config.social.agentarxiv_key:
+            self.agentarxiv = AgentArxivConnector(config.social.agentarxiv_key)
 
         # Timing trackers
         self._last_post = datetime.min
@@ -188,6 +193,29 @@ class AutonomousLoop:
                     post_id=post_data.get("post_id", ""),
                 )
                 logger.info(f"Generated (local): {post_data['topic']}")
+
+            # Also publish to AgentArxiv if available
+            if self.agentarxiv and post_data.get("paper"):
+                paper = post_data["paper"]
+                arxiv_result = self.agentarxiv.publish_paper(
+                    title=paper.get("title", ""),
+                    abstract=paper.get("abstract", "")[:500],
+                    body=(
+                        f"## Research\n\n{paper.get('abstract', '')}\n\n"
+                        f"**ArXiv**: {paper.get('abs_url', '')}\n"
+                        f"**Code**: https://github.com/Agnuxo1\n"
+                        f"**Scholar**: https://scholar.google.com/citations?user=6nOpJ9IAAAAJ\n"
+                    ),
+                    tags=["neuromorphic-computing", "AGI", "physics-based-ai"],
+                )
+                if arxiv_result:
+                    self.state.log_post(
+                        platform="agentarxiv",
+                        content=paper.get("title", ""),
+                        topic=post_data["topic"],
+                        post_id=post_data.get("post_id", ""),
+                    )
+                    logger.info(f"Published to AgentArxiv: {paper.get('title', '')[:50]}")
 
         except Exception as e:
             logger.error(f"Publish failed: {e}")

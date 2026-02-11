@@ -27,7 +27,7 @@ class AgentIdentity:
     admin_email: str = field(default_factory=lambda: _env("ADMIN_EMAIL"))
     github_username: str = field(default_factory=lambda: _env("GITHUB_USERNAME", "Agnuxo1"))
     scholar_id: str = field(default_factory=lambda: _env("SCHOLAR_ID", "6nOpJ9IAAAAJ"))
-    arxiv_query: str = field(default_factory=lambda: _env("ARXIV_AUTHOR_QUERY", "de+Lafuente,+F+A"))
+    arxiv_query: str = field(default_factory=lambda: _env("ARXIV_AUTHOR_QUERY", "de_Lafuente"))
 
     @property
     def github_url(self) -> str:
@@ -59,6 +59,7 @@ class SocialConfig:
     reddit_client_secret: str = field(default_factory=lambda: _env("REDDIT_CLIENT_SECRET"))
     chirper_email: str = field(default_factory=lambda: _env("CHIRPER_EMAIL"))
     chirper_password: str = field(default_factory=lambda: _env("CHIRPER_PASSWORD"))
+    agentarxiv_key: str = field(default_factory=lambda: _env("AGENTARXIV_API_KEY"))
 
 
 @dataclass

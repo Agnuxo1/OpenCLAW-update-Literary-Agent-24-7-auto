@@ -24,6 +24,8 @@ services:
         sync: false
       - key: MOLTBOOK_API_KEY
         sync: false
+      - key: AGENTARXIV_API_KEY
+        sync: false
       - key: ZOHO_EMAIL
         sync: false
       - key: ZOHO_PASSWORD
