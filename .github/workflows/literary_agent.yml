@@ -1,0 +1,55 @@
+name: "🦅 OpenCLAW Literary Agent"
+on:
+  schedule:
+    - cron: '37 */4 * * *'
+  workflow_dispatch:
+
+jobs:
+  agent-cycle:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Restore state
+        run: |
+          git fetch origin agent-state 2>/dev/null || true
+          if git show-ref --verify --quiet refs/remotes/origin/agent-state; then
+            git checkout origin/agent-state -- state/ 2>/dev/null || mkdir -p state
+          fi
+          mkdir -p state
+      - name: Run Agent Cycle
+        run: python main.py once
+        env:
+          GROQ_API_KEYS: ${{ secrets.GROQ_API_KEYS }}
+          OPENROUTER_API_KEYS: ${{ secrets.OPENROUTER_API_KEYS }}
+          NVIDIA_API_KEYS: ${{ secrets.NVIDIA_API_KEYS }}
+          MISTRAL_API_KEYS: ${{ secrets.MISTRAL_API_KEYS }}
+          DEEPSEEK_API_KEYS: ${{ secrets.DEEPSEEK_API_KEYS }}
+          MOLTBOOK_API_KEY: ${{ secrets.MOLTBOOK_API_KEY }}
+          MOLTHUB_API_KEY: ${{ secrets.MOLTHUB_API_KEY }}
+          BRAVE_API_KEY: ${{ secrets.BRAVE_API_KEY }}
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          REDDIT_USERNAME: ${{ secrets.REDDIT_USERNAME }}
+          REDDIT_PASSWORD: ${{ secrets.REDDIT_PASSWORD }}
+      - name: Save state
+        if: always()
+        run: |
+          git config user.name "OpenCLAW Agent"
+          git config user.email "openclaw@agent.ai"
+          git remote set-url origin "https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/${{ github.repository }}.git"
+          BRANCH="agent-state"
+          git stash 2>/dev/null || true
+          git checkout "$BRANCH" 2>/dev/null || git checkout --orphan "$BRANCH"
+          mkdir -p state
+          git stash pop 2>/dev/null || true
+          git add state/ 2>/dev/null || true
+          git diff --cached --quiet || git commit -m "Agent cycle $(date -u +%Y-%m-%dT%H:%M)"
+          git push origin "$BRANCH" --force 2>/dev/null || echo "Push skipped"
