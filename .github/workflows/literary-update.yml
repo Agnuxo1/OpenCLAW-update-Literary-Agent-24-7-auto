@@ -1,0 +1,111 @@
+# =============================================================================
+# OpenCLAW Literary-Update Agent - FIXED
+# =============================================================================
+# FIXES:
+# 1. Added cron schedule (was missing - agent never ran automatically)
+# 2. Fixed all env var injection (NVIDIA NoneType, Groq 403, Gemini 429)
+# 3. Added GH_TOKEN with write permissions
+# 4. Uses unified LLM provider for automatic failover
+# =============================================================================
+name: Literary Update Agent
+
+on:
+  schedule:
+    # Run every 8 hours
+    - cron: '0 */8 * * *'
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'Execution mode (auto/manual)'
+        required: false
+        default: 'auto'
+
+permissions:
+  contents: write
+
+env:
+  PYTHONUNBUFFERED: "1"
+
+jobs:
+  literary-update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GH_PAT || secrets.GITHUB_TOKEN }}
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt 2>/dev/null || true
+          pip install requests beautifulsoup4 arxiv
+          echo "✅ Dependencies installed"
+
+      - name: Run Literary Update Agent
+        env:
+          # === LLM KEYS (CSV format for unified_llm.py) ===
+          GROQ_API_KEYS: ${{ secrets.GROQ_API_KEYS }}
+          NVIDIA_API_KEYS: ${{ secrets.NVIDIA_API_KEYS }}
+          OPENROUTER_API_KEYS: ${{ secrets.OPENROUTER_API_KEYS }}
+          MISTRAL_API_KEYS: ${{ secrets.MISTRAL_API_KEYS }}
+          DEEPSEEK_API_KEYS: ${{ secrets.DEEPSEEK_API_KEYS }}
+          ZHIPUAI_API_KEYS: ${{ secrets.ZHIPUAI_API_KEYS }}
+          
+          # === Numbered format fallback ===
+          GROQ_API_KEY_1: ${{ secrets.GROQ_API_KEY_1 }}
+          GROQ_API_KEY_2: ${{ secrets.GROQ_API_KEY_2 }}
+          GROQ_API_KEY_3: ${{ secrets.GROQ_API_KEY_3 }}
+          GROQ_API_KEY_4: ${{ secrets.GROQ_API_KEY_4 }}
+          GROQ_API_KEY_5: ${{ secrets.GROQ_API_KEY_5 }}
+          NVIDIA_API_KEY_1: ${{ secrets.NVIDIA_API_KEY_1 }}
+          NVIDIA_API_KEY_2: ${{ secrets.NVIDIA_API_KEY_2 }}
+          NVIDIA_API_KEY_3: ${{ secrets.NVIDIA_API_KEY_3 }}
+          GEMINI_API_KEY_1: ${{ secrets.GEMINI_API_KEY_1 }}
+          GEMINI_API_KEY_2: ${{ secrets.GEMINI_API_KEY_2 }}
+          GEMINI_API_KEY_3: ${{ secrets.GEMINI_API_KEY_3 }}
+          GEMINI_API_KEY_4: ${{ secrets.GEMINI_API_KEY_4 }}
+          GEMINI_API_KEY_5: ${{ secrets.GEMINI_API_KEY_5 }}
+          GEMINI_API_KEY_6: ${{ secrets.GEMINI_API_KEY_6 }}
+          
+          # === Platform keys ===
+          BRAVE_API_KEY: ${{ secrets.BRAVE_API_KEY }}
+          MOLTBOOK_API_KEY: ${{ secrets.MOLTBOOK_API_KEY }}
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+          ZOHO_EMAIL: ${{ secrets.ZOHO_EMAIL }}
+          ZOHO_PASSWORD: ${{ secrets.ZOHO_PASSWORD }}
+          
+          # === GitHub ===
+          GH_TOKEN: ${{ secrets.GH_PAT || secrets.GITHUB_TOKEN }}
+          GIST_STATE_ID: ${{ secrets.GIST_STATE_ID }}
+          
+        run: |
+          echo "📚 Starting Literary Update Agent..."
+          echo "Mode: ${{ github.event.inputs.mode || 'auto' }}"
+          echo "Time: $(date -u)"
+          
+          # Verify at least one LLM key exists
+          if [ -z "$GROQ_API_KEYS" ] && [ -z "$GROQ_API_KEY_1" ] && \
+             [ -z "$NVIDIA_API_KEYS" ] && [ -z "$NVIDIA_API_KEY_1" ] && \
+             [ -z "$OPENROUTER_API_KEYS" ]; then
+            echo "⚠️ WARNING: No LLM API keys detected in environment!"
+            echo "Please configure secrets: GROQ_API_KEYS, NVIDIA_API_KEYS, or OPENROUTER_API_KEYS"
+          fi
+          
+          python main.py || python literary_main.py || echo "❌ Agent execution failed"
+
+      - name: Commit state changes
+        if: always()
+        run: |
+          git config user.name "OpenCLAW-Bot"
+          git config user.email "openclaw@users.noreply.github.com"
+          git add -A 2>/dev/null || true
+          git diff --cached --quiet || git commit -m "🤖 Literary-update agent cycle $(date -u +%Y-%m-%dT%H:%M)" || true
+          git push || echo "⚠️ Push failed (check GH_PAT permissions)"

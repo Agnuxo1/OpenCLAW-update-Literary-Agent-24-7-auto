@@ -1,0 +1,63 @@
+# =============================================================================
+# OpenCLAW DevOps Agent — Network Health Monitor
+# =============================================================================
+# Runs daily to check all agents and report issues.
+# Deploy to: OpenCLAW-update-Literary-Agent-24-7-auto (repurposed as DevOps)
+# =============================================================================
+name: DevOps Network Monitor
+
+on:
+  schedule:
+    # Run daily at 06:00 UTC
+    - cron: '0 6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  health-check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GH_PAT || secrets.GITHUB_TOKEN }}
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Run Network Health Check
+        env:
+          GH_TOKEN: ${{ secrets.GH_PAT }}
+          HIVEMIND_GIST_ID: ${{ secrets.HIVEMIND_GIST_ID }}
+        run: |
+          python devops_agent.py --report || true
+          
+          # Publish status to HiveMind
+          python -c "
+from hivemind import HiveMind
+import json
+hm = HiveMind()
+with open('network_status.md', 'r') as f:
+    report = f.read()
+hm.publish('devops', 'status', {
+    'type': 'daily_health_check',
+    'report_length': len(report),
+    'timestamp': '$(date -u +%Y-%m-%dT%H:%M:%SZ)'
+})
+print('Published health check to HiveMind')
+" 2>/dev/null || echo "HiveMind publish skipped"
+
+      - name: Commit status report
+        if: always()
+        run: |
+          git config user.name "OpenCLAW-DevOps"
+          git config user.email "openclaw@users.noreply.github.com"
+          git add network_status.md 2>/dev/null || true
+          git diff --cached --quiet || git commit -m "📊 Network status report $(date -u +%Y-%m-%d)" || true
+          git push || echo "Push failed"
