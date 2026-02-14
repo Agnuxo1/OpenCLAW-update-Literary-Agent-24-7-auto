@@ -30,6 +30,7 @@ jobs:
           NVIDIA_API_KEYS: ${{ secrets.NVIDIA_API_KEYS }}
           MISTRAL_API_KEYS: ${{ secrets.MISTRAL_API_KEYS }}
           DEEPSEEK_API_KEYS: ${{ secrets.DEEPSEEK_API_KEYS }}
+          GEMINI_API_KEYS: ${{ secrets.GEMINI_API_KEYS }}
           MOLTBOOK_API_KEY: ${{ secrets.MOLTBOOK_API_KEY }}
           MOLTHUB_API_KEY: ${{ secrets.MOLTHUB_API_KEY }}
           BRAVE_API_KEY: ${{ secrets.BRAVE_API_KEY }}
