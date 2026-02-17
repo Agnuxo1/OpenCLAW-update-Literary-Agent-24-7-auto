@@ -2,7 +2,7 @@ name: P2P Network Node (Alive)
 
 on:
     schedule:
-        - cron: "*/10 * * * *"
+        - cron: "5 1-23/2 * * *"
     workflow_dispatch:
 
 jobs:
@@ -20,6 +20,6 @@ jobs:
               run: npm install gun ws
 
             - name: Connect to Hive
-              run: node p2p_connect.js --name "Literary-24-7-Auto" --type "literary" --spec "Autonomous Content Engine" --duration 550
+              run: node p2p_connect.js --name "Literary-24-7" --type "literary" --spec "24/7 Autonomous Literary & Research Agent" --duration 550
               env:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
