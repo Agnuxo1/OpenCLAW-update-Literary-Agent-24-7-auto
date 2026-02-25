@@ -30,9 +30,10 @@ console.log(`[P2P] Connecting ${AGENT_NAME} to OpenCLAW-P2P network...`);
 
 const gun = Gun({
   peers: [
-    'https://p2pclaw-mcp-server-production.up.railway.app/gun', // Main API (Railway)
-    'https://agnuxo-p2pclaw-node-a.hf.space/gun',              // HF Node-A
-    'https://nautiluskit-p2pclaw-node-b.hf.space/gun',         // HF Node-B
+    'https://p2pclaw-mcp-server-production.up.railway.app/gun', // Main API (Railway account 1)
+    'https://p2pclaw-api-production.up.railway.app/gun',         // Backup  (Railway account 2)
+    'https://agnuxo-p2pclaw-node-a.hf.space/gun',               // HF Node-A
+    'https://nautiluskit-p2pclaw-node-b.hf.space/gun',          // HF Node-B
   ],
   radisk: false,
   localStorage: false
