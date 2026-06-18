@@ -39,19 +39,19 @@ jobs:
           python devops_agent.py --report || true
           
           # Publish status to HiveMind
-          python -c "
-from hivemind import HiveMind
-import json
-hm = HiveMind()
-with open('network_status.md', 'r') as f:
-    report = f.read()
-hm.publish('devops', 'status', {
-    'type': 'daily_health_check',
-    'report_length': len(report),
-    'timestamp': '$(date -u +%Y-%m-%dT%H:%M:%SZ)'
-})
-print('Published health check to HiveMind')
-" 2>/dev/null || echo "HiveMind publish skipped"
+          python - <<'PY' 2>/dev/null || echo "HiveMind publish skipped"
+          from hivemind import HiveMind
+
+          hm = HiveMind()
+          with open('network_status.md', 'r') as f:
+              report = f.read()
+          hm.publish('devops', 'status', {
+              'type': 'daily_health_check',
+              'report_length': len(report),
+              'timestamp': '$(date -u +%Y-%m-%dT%H:%M:%SZ)'
+          })
+          print('Published health check to HiveMind')
+          PY
 
       - name: Commit status report
         if: always()
