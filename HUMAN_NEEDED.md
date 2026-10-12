@@ -43,3 +43,28 @@ Sesión cloud de KOPS, 2026-10-12. Estado: **bloqueada**. No se ha hecho ninguna
 ## Notas
 
 - Esta rama sale de `origin/main`. La rama `claude/tender-wright-arhsb9` ya no existe en `origin`.
+
+## Sesión 3 (2026-10-12, arranque KOPS)
+
+Estado: **bloqueada**. No se ha hecho ninguna acción en Kaggle ni en Lightning.
+
+Comprobado al arrancar:
+- Rama `kops/cloud-2026-10-12` seguida desde `origin`, sin cambios locales previos.
+- Archivos de arranque (`KOPS_CLAUDE.md`, `CLOUD.md`, `handoff/CHECKPOINT.md`, `handoff/kops-portfolio.json`, `STATUS.md`, `TECH_FIT.md`, `DECISIONS.md`, `JOURNAL.md`): ausentes en esta rama, en `main`, en `agent-state` y en la máquina de la sesión (búsqueda por nombre en todo el sistema de ficheros). `state/` solo contiene `.gitkeep`.
+- Variables `KAGGLE_USERNAME` y `KAGGLE_KEY`: no definidas. CLI `kaggle`: no instalada.
+- `kaggle.com` y `lightning.ai`: el proxy de salida responde 403 al CONNECT (denegación de política de red). Aunque hubiera credenciales, no hay vía de red a Kaggle.
+- No he usado ninguna credencial de los archivos subidos. No he escrito valores de claves en ningún fichero ni commit.
+
+Estado de los hitos:
+1. **RSNA knee**: sin comprobar v8 ni v9. Requiere Kaggle (bloqueos 1 y 2 de arriba). Plazo 22-oct.
+2. **ARC-AGI-3**: límite diario sin verificar. Requiere abrir la ficha en Kaggle. Bloqueado.
+3. **ARC-AGI-2**: sin cambios. No hay base NVARC en el repo; falta tu decisión sobre Kaggle kernels.
+4. **Misconception y memecoins**: sin cambios. Pendiente de tu aceptación de reglas y del bot de Telegram.
+5. **AI4S**: no se ha podido retirar del portfolio porque `state/` no contiene `kops-portfolio.json`. Venció el 10-oct.
+6. **TECH_FIT.md**: triaje no hecho. Falta el fichero con las 8 competiciones y el acceso a leaderboards.
+
+Para desbloquear (Fran):
+1. Subir a `kops/cloud-2026-10-12` los archivos de arranque o indicar el repositorio donde viven. Hasta entonces no creo `handoff/CHECKPOINT.md` ni `JOURNAL.md`, para no duplicar ni pisar los reales.
+2. Definir `KAGGLE_USERNAME` y `KAGGLE_KEY` en la configuración del entorno cloud (nunca en el repo). Permitir `kaggle.com` y el host de descargas que use la CLI en Network access. Después, abrir una sesión nueva.
+3. Rotar las credenciales de los archivos subidos (pendiente desde la sesión 2) y quitar esas subidas de la sesión.
+4. Con los puntos 1 y 2 resueltos, el primer paso es comprobar v8 y v9 de RSNA frente a v6 (0,942). Quedan 10 días para el plazo del 22-oct.
