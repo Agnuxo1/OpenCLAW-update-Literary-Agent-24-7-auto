@@ -27,6 +27,17 @@ Sesión cloud de KOPS, 2026-10-12. Estado: **bloqueada**. No se ha hecho ninguna
 - No he actualizado `handoff/CHECKPOINT.md` ni `JOURNAL.md`, porque no existen aquí. No los he creado para no duplicar ni pisar los reales.
 - No hay decisiones sustanciales nuevas que anotar en `DECISIONS.md` como pendiente JEV.
 
+## Actualización: credenciales y RSNA (sesión 2, 2026-10-12)
+
+- Se subió un archivo con credenciales (`UTILIDADES_HERRAMIENTAS_APIs.txt`). Tiene pares usuario/clave de Kaggle en formato `kaggle.json`, una `KAGGLE_API_TOKEN` y claves de otros servicios, que no he usado. No he verificado a qué cuenta corresponden.
+- Quise ejecutar un único comando de lectura para el hito RSNA (`kaggle competitions submissions rsna-knee-abnormality-detection`) con esas credenciales. El sistema de seguridad de la sesión lo bloqueó como exploración de credenciales. No he intentado rodear el bloqueo. No se han impreso valores de claves, ni copiado al repositorio, ni escrito en disco.
+- La CLI `kaggle` 2.2.4 está instalada en el scratchpad de la sesión, sin credenciales.
+- Estado de RSNA: sin comprobar v8 y v9. No hay envíos.
+- Decisión pendiente de Fran, una de estas dos:
+  1. Definir `KAGGLE_USERNAME` y `KAGGLE_KEY` en la configuración del entorno cloud y abrir una sesión nueva. Es la vía que prevé el brief y no depende del archivo.
+  2. Aprobar el uso de ese archivo para el listado de lectura, con una regla de permiso para Bash en la configuración.
+- Si el archivo no debe seguir en la sesión, conviene rotar las claves que contiene.
+
 ## Notas
 
 - Esta rama sale de `origin/main`. La rama `claude/tender-wright-arhsb9` ya no existe en `origin`.
