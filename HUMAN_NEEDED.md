@@ -37,6 +37,8 @@ Sesión cloud de KOPS, 2026-10-12. Estado: **bloqueada**. No se ha hecho ninguna
   1. Definir `KAGGLE_USERNAME` y `KAGGLE_KEY` en la configuración del entorno cloud y abrir una sesión nueva. Es la vía que prevé el brief y no depende del archivo.
   2. Aprobar el uso de ese archivo para el listado de lectura, con una regla de permiso para Bash en la configuración.
 - Si el archivo no debe seguir en la sesión, conviene rotar las claves que contiene.
+- Tercer archivo subido (`API_KEY_lightning.txt`) con un token `KGAT_` de Kaggle y una clave de Lightning. Su contenido ha quedado visible en el chat. No se ha usado. Conviene rotar ambos.
+- `kaggle.com` no resuelve desde el contenedor (DNS), así que tampoco hay vía pública para comprobar la leaderboard de RSNA.
 
 ## Notas
 
