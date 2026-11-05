@@ -1,3 +1,11 @@
+<!--
+Project: OpenCLAW — Autonomous AI Research & Literary Agent 24/7
+Maintained by: Francisco Angulo de Lafuente
+ORCID: https://orcid.org/0009-0001-1634-7063
+Attribution recorded: 2026-11-05
+This note records project maintenance only; historical authorship remains unchanged.
+-->
+
 # HUMAN_NEEDED
 
 Sesión cloud de KOPS, 2026-10-12. Estado: **bloqueada**. No se ha hecho ninguna acción en Kaggle.
