@@ -1,0 +1,127 @@
+{
+  "schema_version": "1.0",
+  "project": "OpenCLAW — Autonomous AI Research & Literary Agent 24/7",
+  "author": "Francisco Angulo de Lafuente",
+  "orcid": "https://orcid.org/0009-0001-1634-7063",
+  "copyright_year": 2026,
+  "recorded_on": "2026-11-05",
+  "canonical_url": "https://github.com/Agnuxo1/OpenCLAW-update-Literary-Agent-24-7-auto",
+  "attribution_basis": {
+    "owner_identity": "The public GitHub profile for Agnuxo1 names Francisco Angulo de Lafuente.",
+    "path_history": "Every baseline main path maps to Git author labels Agnuxo1 and/or Francisco Angulo de Lafuente; exact labels are preserved in provenance-baseline.json.",
+    "owner_instruction": "The repository owner directly supplied this Author and ORCID attribution for the in-scope repositories.",
+    "limitation": "Git author labels and repository ownership are evidence for attribution, not cryptographic proof of authorship or chain of title."
+  },
+  "license_scope": {
+    "identifier": "MIT",
+    "license_file": "LICENSE",
+    "scope_document": "LICENSE_SCOPE.md",
+    "baseline_manifest": "provenance-baseline.json",
+    "baseline_manifest_sha256": "a08cea56bd0f2d9ca56dd3a5c5b5d433fa3582bda9661462d87db79145ef84d6",
+    "original_owner_authored_file_count": 34,
+    "original_owner_authored_files": [
+      ".env.example",
+      ".github/workflows/devops-monitor.yml",
+      ".github/workflows/literary-update.yml",
+      ".github/workflows/literary_agent.yml",
+      ".github/workflows/p2p-alive.yml",
+      ".gitignore",
+      "Dockerfile",
+      "Procfile",
+      "README.md",
+      "agents/__init__.py",
+      "agents/literary_agent.py",
+      "agents/research_agent.py",
+      "config.py",
+      "connectors/__init__.py",
+      "connectors/agentarxiv.py",
+      "connectors/arxiv_scraper.py",
+      "connectors/email_connector.py",
+      "connectors/moltbook.py",
+      "core/__init__.py",
+      "core/autonomous_loop.py",
+      "core/llm_provider.py",
+      "core/state_manager.py",
+      "core/strategy_reflector.py",
+      "devops_agent.py",
+      "env_adapter.py",
+      "hivemind.py",
+      "main.py",
+      "p2p_connect.js",
+      "railway.json",
+      "render.yaml",
+      "requirements.txt",
+      "setup.ps1",
+      "tests/test_smoke.py",
+      "unified_llm.py"
+    ],
+    "metadata_files_also_covered": [
+      "CITATION.cff",
+      "LICENSE_SCOPE.md",
+      "provenance.json",
+      "provenance-baseline.json"
+    ],
+    "spdx_header_file_count": 32,
+    "sidecar_only_paths": [
+      "Procfile",
+      "railway.json"
+    ],
+    "excluded": [
+      {
+        "path": "state/.gitkeep",
+        "reason": "Runtime-directory placeholder; no program logic."
+      },
+      {
+        "branch": "agent-state",
+        "paths": [
+          "state/agent_state.json",
+          "state/arxiv_cache.json",
+          "state/post_history.json"
+        ],
+        "reason": "Generated runtime state/cache JSON; independent branch left unchanged."
+      },
+      {
+        "branch": "kops/cloud-2026-10-12",
+        "path": "HUMAN_NEEDED.md",
+        "reason": "Mixed Claude/KOPS operational note; maintainer credit only, no Author/SPDX claim."
+      },
+      {
+        "path": "requirements.txt dependencies",
+        "reason": "Third-party packages retain their own licenses and notices."
+      }
+    ]
+  },
+  "baseline": {
+    "main_commit": "fa5f34c5c26a96044e9879ca3587cb19667588ac",
+    "main_tree": "fdf77cda17786eef1c22225772404d318a412b45",
+    "manifest_sha256": "a08cea56bd0f2d9ca56dd3a5c5b5d433fa3582bda9661462d87db79145ef84d6",
+    "method": "Raw baseline Git blobs and exact UTF-8 excerpts; hashes identify bytes, not authorship or infringement."
+  },
+  "auxiliary_branches": {
+    "kops/cloud-2026-10-12": {
+      "baseline_commit": "20720b25af8b0c3cf57e99af9d3241e9fd0e4072",
+      "extra_document": "HUMAN_NEEDED.md",
+      "treatment": "Preserve text; add maintainer attribution only."
+    },
+    "agent-state": {
+      "baseline_commit": "7f62f4c64b5048ef34d6ff76c54e9a28dfb7a3b3",
+      "treatment": "Generated runtime branch left byte-for-byte unchanged."
+    }
+  },
+  "contest_rules": {
+    "status": "none_applicable_identified",
+    "scope": "Repository contents and metadata reviewed; no contest submission or applicable edition identified."
+  },
+  "cryptographic_signature": false,
+  "local_validation": {
+    "recorded_on": "2026-11-05",
+    "static_verification": "PASS",
+    "targeted_safe_tests": "4 passed; network-dependent ArXiv fetch deselected",
+    "python_ast_files": 20,
+    "node_and_powershell_syntax": "PASS",
+    "cff_1_2_0_schema_validation": "PASS",
+    "baseline_hashes": 34,
+    "distinctive_excerpt_hashes": 4,
+    "workflow_execution": "Not performed; workflows call external integrations and run on schedules."
+  }
+}

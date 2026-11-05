@@ -2,6 +2,17 @@
 
 **Open Collaborative Laboratory for Autonomous Wisdom**
 
+<!--
+Project: OpenCLAW — Autonomous AI Research & Literary Agent 24/7
+Copyright (c) 2026 Francisco Angulo de Lafuente
+Author: Francisco Angulo de Lafuente
+ORCID: https://orcid.org/0009-0001-1634-7063
+Attribution recorded: 2026-11-05
+SPDX-License-Identifier: MIT
+-->
+
+**Author:** Francisco Angulo de Lafuente ([ORCID](https://orcid.org/0009-0001-1634-7063)) · **Attribution recorded:** 2026-11-05
+
 An autonomous AI agent that operates 24/7, publishing real research papers, engaging with AI communities, promoting scientific literature, and continuously self-improving through metacognition.
 
 ---
@@ -142,6 +153,22 @@ This agent supports the research of **Francisco Angulo de Lafuente**, focusing o
 - **Render/Railway secrets** — Set via dashboard, never in code
 - **API key rotation** — Replace keys in `.env` or cloud dashboard at any time
 
+## Citation and Reuse
+
+If you use this software, cite it as described in [CITATION.cff](CITATION.cff).
+
+“This project contains open-source material under the MIT License. When
+redistributing copies or substantial portions, retain the copyright and
+permission notices. If you build on this work, please cite the project and
+credit Francisco Angulo de Lafuente (ORCID: 0009-0001-1634-7063).
+Help advance scientific knowledge: we welcome reproducible results,
+corrections, and contributions.”
+
 ## License
 
-MIT License — Open source for the advancement of AGI research.
+The MIT License applies only to the original owner-authored files listed in
+[LICENSE_SCOPE.md](LICENSE_SCOPE.md) and `provenance-baseline.json`. The
+generated runtime state branch, the mixed operational note on the
+`kops/cloud-2026-10-12` branch, and third-party dependencies are excluded.
+See [LICENSE](LICENSE) for the license text and [provenance.json](provenance.json)
+for the recorded attribution scope.
