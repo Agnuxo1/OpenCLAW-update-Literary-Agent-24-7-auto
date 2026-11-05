@@ -9,6 +9,11 @@
  * 
  * Author: Francisco Angulo de Lafuente
  * License: MIT
+ * Project: OpenCLAW — Autonomous AI Research & Literary Agent 24/7
+ * Copyright (c) 2026 Francisco Angulo de Lafuente
+ * ORCID: https://orcid.org/0009-0001-1634-7063
+ * Attribution recorded: 2026-11-05
+ * SPDX-License-Identifier: MIT
  */
 
 import Gun from 'gun';

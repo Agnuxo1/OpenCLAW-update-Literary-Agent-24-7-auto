@@ -1,0 +1,448 @@
+{
+  "format": "openclaw-provenance-baseline-v1",
+  "recorded_on": "2026-11-05",
+  "repository": "https://github.com/Agnuxo1/OpenCLAW-update-Literary-Agent-24-7-auto",
+  "baseline_ref": "refs/heads/main",
+  "baseline_commit": "fa5f34c5c26a96044e9879ca3587cb19667588ac",
+  "baseline_tree": "fdf77cda17786eef1c22225772404d318a412b45",
+  "method": "For each listed path, read exact bytes from `git cat-file blob <baseline-commit>:<path>`; compute SHA-256 over those bytes; also record the Git blob object ID. Excerpts are exact UTF-8 substrings hashed independently.",
+  "hash_scope": "Original owner-attributed main-branch files only; generated, placeholder, mixed-author, and third-party content excluded.",
+  "files": [
+    {
+      "path": ".env.example",
+      "git_blob_oid": "67b49f1f9ddb47eca3a007705f15122f0e90e658",
+      "sha256_raw_git_blob": "1898f31b638ad9098646927c477ab72229fad0d3cc6486c62b18bd79860d7916",
+      "size_bytes": 1757,
+      "git_author_labels": [
+        "Agnuxo1"
+      ],
+      "license": "MIT",
+      "attribution_method": "native_comment"
+    },
+    {
+      "path": ".github/workflows/devops-monitor.yml",
+      "git_blob_oid": "6fced3773031099eb6df3ffd1890acd18de13386",
+      "sha256_raw_git_blob": "bcd35150320903c001be34a1715474c6f7df70ec42213d83f224d2fc8f12d2b7",
+      "size_bytes": 2067,
+      "git_author_labels": [
+        "Francisco Angulo de Lafuente"
+      ],
+      "license": "MIT",
+      "attribution_method": "native_comment"
+    },
+    {
+      "path": ".github/workflows/literary-update.yml",
+      "git_blob_oid": "dfb3344d179a70e4ccf4fb7866fe0c2b775a5114",
+      "sha256_raw_git_blob": "e658cd1b52cb6eda89dddbbbbd8e448a3400189e3b78e06717df333a9ced199d",
+      "size_bytes": 4073,
+      "git_author_labels": [
+        "Francisco Angulo de Lafuente"
+      ],
+      "license": "MIT",
+      "attribution_method": "native_comment"
+    },
+    {
+      "path": ".github/workflows/literary_agent.yml",
+      "git_blob_oid": "799066626b79767449f3af52064a2c6a56a5f530",
+      "sha256_raw_git_blob": "ceb42e985ed822ba319a4c1df06aebe6847cf967e8e3816120488a61128a0ce8",
+      "size_bytes": 2323,
+      "git_author_labels": [
+        "Agnuxo1",
+        "Francisco Angulo de Lafuente"
+      ],
+      "license": "MIT",
+      "attribution_method": "native_comment"
+    },
+    {
+      "path": ".github/workflows/p2p-alive.yml",
+      "git_blob_oid": "f103c19b9c1d7ec56557b669dff884a3059ed78e",
+      "sha256_raw_git_blob": "27aa90b9c897419af118d41a4252b80d1d0796bf2064cdfda6764a1428a49890",
+      "size_bytes": 696,
+      "git_author_labels": [
+        "Francisco Angulo de Lafuente"
+      ],
+      "license": "MIT",
+      "attribution_method": "native_comment"
+    },
+    {
+      "path": ".gitignore",
+      "git_blob_oid": "7c51fb6f403620e5dcfcf6321e6fff508cc17eb5",
+      "sha256_raw_git_blob": "a538e5f41233e204f768f53b0a626f3e773583c088998c823bcc8b530dc602ef",
+      "size_bytes": 350,
+      "git_author_labels": [
+        "Agnuxo1"
+      ],
+      "license": "MIT",
+      "attribution_method": "native_comment"
+    },
+    {
+      "path": "Dockerfile",
+      "git_blob_oid": "c69ab7a72bd69211240c0f76d780b799886b86a2",
+      "sha256_raw_git_blob": "4408bb98b2d517d049280fa6851d0d91e2d7f4f46f2ad9c94a45a04eff561602",
+      "size_bytes": 418,
+      "git_author_labels": [
+        "Agnuxo1"
+      ],
+      "license": "MIT",
+      "attribution_method": "native_comment"
+    },
+    {
+      "path": "Procfile",
+      "git_blob_oid": "162010cffa2e997cd8b4662325ee14c373e462c6",
+      "sha256_raw_git_blob": "996ad0bd6c2efbb519a13bf1a2469e76e2abbdd68daa23871cb17a4b6c789cc5",
+      "size_bytes": 24,
+      "git_author_labels": [
+        "Agnuxo1"
+      ],
+      "license": "MIT",
+      "attribution_method": "provenance.json sidecar"
+    },
+    {
+      "path": "README.md",
+      "git_blob_oid": "52a0dbbe68af576ef1e9957c133f726c58c58197",
+      "sha256_raw_git_blob": "71160e58b8617688b1d542f49b126857abe863c9570fb4b4860314aef7234c2d",
+      "size_bytes": 5472,
+      "git_author_labels": [
+        "Agnuxo1"
+      ],
+      "license": "MIT",
+      "attribution_method": "native_comment"
+    },
+    {
+      "path": "agents/__init__.py",
+      "git_blob_oid": "4f996ded646f1f5a973d7ede75adf1c2aa753f8e",
+      "sha256_raw_git_blob": "4592d21f04a0dff464308804c142f4e1d7884d650c400610d28368577d64f14b",
+      "size_bytes": 31,
+      "git_author_labels": [
+        "Agnuxo1"
+      ],
+      "license": "MIT",
+      "attribution_method": "native_comment"
+    },
+    {
+      "path": "agents/literary_agent.py",
+      "git_blob_oid": "2e89c3b7b4d96fdb0856b85b6ffdcf9858032834",
+      "sha256_raw_git_blob": "b4ec56e14c22255034444595359a5d7532119dce059cd2e3f328204b8e01bca1",
+      "size_bytes": 6332,
+      "git_author_labels": [
+        "Agnuxo1"
+      ],
+      "license": "MIT",
+      "attribution_method": "native_comment"
+    },
+    {
+      "path": "agents/research_agent.py",
+      "git_blob_oid": "b72af36c8386e84ecd7672b6f74d3d93eba31525",
+      "sha256_raw_git_blob": "318d36ec7bf7024f3d8f3dcfed3302b46099ce0d623b54318fb47b371cbe5cbf",
+      "size_bytes": 6090,
+      "git_author_labels": [
+        "Agnuxo1"
+      ],
+      "license": "MIT",
+      "attribution_method": "native_comment"
+    },
+    {
+      "path": "config.py",
+      "git_blob_oid": "1fa9ac0fcdae6b39b5e8227589f88e34f4d3b2a6",
+      "sha256_raw_git_blob": "3b37b09a80015748c820c881e9ee21610f158db5f996fe517b229c695824c264",
+      "size_bytes": 4786,
+      "git_author_labels": [
+        "Agnuxo1"
+      ],
+      "license": "MIT",
+      "attribution_method": "native_comment"
+    },
+    {
+      "path": "connectors/__init__.py",
+      "git_blob_oid": "f4fe6284ed0ae4aee213e846f5eb843854bf9aca",
+      "sha256_raw_git_blob": "b4830b2af834470d0ca30aaa10da6bb5beb0c02f8e05808311819aa256e45cb5",
+      "size_bytes": 31,
+      "git_author_labels": [
+        "Agnuxo1"
+      ],
+      "license": "MIT",
+      "attribution_method": "native_comment"
+    },
+    {
+      "path": "connectors/agentarxiv.py",
+      "git_blob_oid": "1e8fc521a849ceca347c21d45b43f10dc1978b03",
+      "sha256_raw_git_blob": "4f1ea78900eb3464e35e6020c2f19179da22441d07df38f7537a7957dc67bfea",
+      "size_bytes": 3154,
+      "git_author_labels": [
+        "Agnuxo1"
+      ],
+      "license": "MIT",
+      "attribution_method": "native_comment"
+    },
+    {
+      "path": "connectors/arxiv_scraper.py",
+      "git_blob_oid": "19eeea732b193549a1a13b1002d0b6bb623e190c",
+      "sha256_raw_git_blob": "20fb5c1f2220f9e67ebc359b987cb7ceb7cc0532e4f81ba5b6fc59995f909fd5",
+      "size_bytes": 5888,
+      "git_author_labels": [
+        "Agnuxo1"
+      ],
+      "license": "MIT",
+      "attribution_method": "native_comment"
+    },
+    {
+      "path": "connectors/email_connector.py",
+      "git_blob_oid": "fdd61d3555ee5f5f3bbc5592a0af85a619bae018",
+      "sha256_raw_git_blob": "962105bd5c9e267144765f404692829a727899d0ac3c22ead5d1a5cae8faa0bf",
+      "size_bytes": 4140,
+      "git_author_labels": [
+        "Agnuxo1"
+      ],
+      "license": "MIT",
+      "attribution_method": "native_comment"
+    },
+    {
+      "path": "connectors/moltbook.py",
+      "git_blob_oid": "356d09f2a4ff2d87cad89e02040316e89a147f54",
+      "sha256_raw_git_blob": "b327e97d561a9b2207cf0ee61ccf3e0d25caf8b8be23876e17c92f4679f262ef",
+      "size_bytes": 6928,
+      "git_author_labels": [
+        "Agnuxo1"
+      ],
+      "license": "MIT",
+      "attribution_method": "native_comment"
+    },
+    {
+      "path": "core/__init__.py",
+      "git_blob_oid": "8ff3b5821b88e9380170a981c8f8feae8d5ad024",
+      "sha256_raw_git_blob": "328ebad2851e6299db476d7dc0aa9baaf517af286e507b4758025fac8ac19f03",
+      "size_bytes": 24,
+      "git_author_labels": [
+        "Agnuxo1"
+      ],
+      "license": "MIT",
+      "attribution_method": "native_comment"
+    },
+    {
+      "path": "core/autonomous_loop.py",
+      "git_blob_oid": "5ea1740ad13cef6b1932707575519d812d55a97b",
+      "sha256_raw_git_blob": "76212db40f0063765d65185c77e7d66547c6555457b6112b7acbe34048279405",
+      "size_bytes": 14952,
+      "git_author_labels": [
+        "Agnuxo1"
+      ],
+      "license": "MIT",
+      "attribution_method": "native_comment"
+    },
+    {
+      "path": "core/llm_provider.py",
+      "git_blob_oid": "1bd4193498fad8c74073386e3067893e51e6cda1",
+      "sha256_raw_git_blob": "7743399520473ec71e78945da5706b80acdd9541e7d278a626b34112e981df20",
+      "size_bytes": 6976,
+      "git_author_labels": [
+        "Agnuxo1",
+        "Francisco Angulo de Lafuente"
+      ],
+      "license": "MIT",
+      "attribution_method": "native_comment"
+    },
+    {
+      "path": "core/state_manager.py",
+      "git_blob_oid": "7771a689fba3d34ef8309d9f32beec64a7108e80",
+      "sha256_raw_git_blob": "c2a3b16c7af4178493aad9df1a63882f0467940e5c8c53bd7d01f1dfbb87afd0",
+      "size_bytes": 7021,
+      "git_author_labels": [
+        "Agnuxo1"
+      ],
+      "license": "MIT",
+      "attribution_method": "native_comment"
+    },
+    {
+      "path": "core/strategy_reflector.py",
+      "git_blob_oid": "8f9b219cc0104300830f96bedcd43aa2d397b262",
+      "sha256_raw_git_blob": "62f53b76b4cd48dcb06f1b11b7afe970416427e24cfd60d7342025a8021893ac",
+      "size_bytes": 11030,
+      "git_author_labels": [
+        "Agnuxo1"
+      ],
+      "license": "MIT",
+      "attribution_method": "native_comment"
+    },
+    {
+      "path": "devops_agent.py",
+      "git_blob_oid": "f99516edaaf66405f793f64df131f1972653a12e",
+      "sha256_raw_git_blob": "6a18956dfbe56d7b3846892efb2972fc3e2aa0859f4198d0e10f0347278df6be",
+      "size_bytes": 10317,
+      "git_author_labels": [
+        "Francisco Angulo de Lafuente"
+      ],
+      "license": "MIT",
+      "attribution_method": "native_comment"
+    },
+    {
+      "path": "env_adapter.py",
+      "git_blob_oid": "0838faa10b8e3fbe1ccf750b6ac2fea2deccbd99",
+      "sha256_raw_git_blob": "9037792659d5396eca0621d161524421a7b5c4e3af6fc9c4bc0530d0e7580ccf",
+      "size_bytes": 4376,
+      "git_author_labels": [
+        "Francisco Angulo de Lafuente"
+      ],
+      "license": "MIT",
+      "attribution_method": "native_comment"
+    },
+    {
+      "path": "hivemind.py",
+      "git_blob_oid": "9891a62dc0c45978936c52dce056db13e86570b3",
+      "sha256_raw_git_blob": "6a9d23fc0900bae3474bb2b41af292a3450fd80ab77b602908d6d417404c803a",
+      "size_bytes": 12358,
+      "git_author_labels": [
+        "Francisco Angulo de Lafuente"
+      ],
+      "license": "MIT",
+      "attribution_method": "native_comment"
+    },
+    {
+      "path": "main.py",
+      "git_blob_oid": "1fe98234a63f35f73eaeb0ad6cf2cbb0a4924343",
+      "sha256_raw_git_blob": "c9ab4695c4347ccc3a2b75fb04b8f3665fd4f9174b2697136c811239818d1e86",
+      "size_bytes": 3479,
+      "git_author_labels": [
+        "Agnuxo1"
+      ],
+      "license": "MIT",
+      "attribution_method": "native_comment"
+    },
+    {
+      "path": "p2p_connect.js",
+      "git_blob_oid": "d797a860546598cfa0ae5248fc0bef9be90e5fe3",
+      "sha256_raw_git_blob": "7837cb360581f025871ebce3cee8cf68a601a6ed57ac9cc20f2eeddbd3e1d693",
+      "size_bytes": 2801,
+      "git_author_labels": [
+        "Agnuxo1",
+        "Francisco Angulo de Lafuente"
+      ],
+      "license": "MIT",
+      "attribution_method": "native_comment"
+    },
+    {
+      "path": "railway.json",
+      "git_blob_oid": "f23420f56beaafa654b70fd3651f543926958f10",
+      "sha256_raw_git_blob": "cb54c93e7138a7866c0102ac82e073f1f5a7c4d6d57549b2f14e5731aea6a854",
+      "size_bytes": 302,
+      "git_author_labels": [
+        "Agnuxo1"
+      ],
+      "license": "MIT",
+      "attribution_method": "provenance.json sidecar"
+    },
+    {
+      "path": "render.yaml",
+      "git_blob_oid": "0e9b37e1b13ad2eeb04ea8cba42e4253b40cca5c",
+      "sha256_raw_git_blob": "196f378de976b3af02a337ec2eb35bc232b4bc12490f7f35806e00e59ab60df3",
+      "size_bytes": 951,
+      "git_author_labels": [
+        "Agnuxo1"
+      ],
+      "license": "MIT",
+      "attribution_method": "native_comment"
+    },
+    {
+      "path": "requirements.txt",
+      "git_blob_oid": "3aa055135f180a7e9733fac6bdb9f1125ea1dadc",
+      "sha256_raw_git_blob": "072df27f2363025dba7971bb08024611223306fdaaca9e37a442b92ac41d3506",
+      "size_bytes": 54,
+      "git_author_labels": [
+        "Agnuxo1"
+      ],
+      "license": "MIT",
+      "attribution_method": "native_comment"
+    },
+    {
+      "path": "setup.ps1",
+      "git_blob_oid": "f2ff6a26863c144a6893ac76420fee9cf0fa4565",
+      "sha256_raw_git_blob": "cee8c539af5c9e1a35816d0bb01d15e1ac985e2f47de7c261b43089a10dc0ff9",
+      "size_bytes": 1952,
+      "git_author_labels": [
+        "Agnuxo1"
+      ],
+      "license": "MIT",
+      "attribution_method": "native_comment"
+    },
+    {
+      "path": "tests/test_smoke.py",
+      "git_blob_oid": "4f4bb5f301809d2090aae38b025ef03a7cbcc653",
+      "sha256_raw_git_blob": "c4035d264d7a5b3448bf53803ff39996ce9a257fd650eb1ce3f04383ef3d170e",
+      "size_bytes": 3102,
+      "git_author_labels": [
+        "Agnuxo1"
+      ],
+      "license": "MIT",
+      "attribution_method": "native_comment"
+    },
+    {
+      "path": "unified_llm.py",
+      "git_blob_oid": "5cc8e94963608fb8c7fa8c7c50a5918f2000354a",
+      "sha256_raw_git_blob": "ba2996448c6acc056926515a89137b7d22339b3595d29e77b65b2ef4b798a5a1",
+      "size_bytes": 14930,
+      "git_author_labels": [
+        "Francisco Angulo de Lafuente"
+      ],
+      "license": "MIT",
+      "attribution_method": "native_comment"
+    }
+  ],
+  "distinctive_excerpts": [
+    {
+      "path": "README.md",
+      "baseline_commit": "fa5f34c5c26a96044e9879ca3587cb19667588ac",
+      "excerpt": "An autonomous AI agent that operates 24/7, publishing real research papers, engaging with AI communities, promoting scientific literature, and continuously self-improving through metacognition.",
+      "sha256_utf8_exact_excerpt": "7ecc7b7d419b66be4e100fc1964f6d64cf488d96e03733b49ad44b3f2f8b8479",
+      "purpose": "Distinctive project summary."
+    },
+    {
+      "path": "core/autonomous_loop.py",
+      "baseline_commit": "fa5f34c5c26a96044e9879ca3587cb19667588ac",
+      "excerpt": "if self._elapsed_hours(self._last_post) >= sched.post_interval_hours:",
+      "sha256_utf8_exact_excerpt": "aaf4706ee46214b2a585bd2e8f7cafd95ea8f7595e136971df261993ce13ae94",
+      "purpose": "Scheduled research-publishing condition."
+    },
+    {
+      "path": "connectors/arxiv_scraper.py",
+      "baseline_commit": "fa5f34c5c26a96044e9879ca3587cb19667588ac",
+      "excerpt": "return self._cache  # Return stale cache if available",
+      "sha256_utf8_exact_excerpt": "9c7edd1363d43e3f459a5f3c82a30772b4b5c2ee405e8ea1041b94b17ca0571b",
+      "purpose": "ArXiv stale-cache fallback behavior."
+    },
+    {
+      "path": "tests/test_smoke.py",
+      "baseline_commit": "fa5f34c5c26a96044e9879ca3587cb19667588ac",
+      "excerpt": "assert \"status\" in report or \"performance_score\" in report",
+      "sha256_utf8_exact_excerpt": "1393002aba974f704e59396d53421df912b8aadfb1c30999fdabd17480f0db63",
+      "purpose": "Metacognition smoke-test invariant."
+    }
+  ],
+  "excluded_baseline_material": {
+    "placeholder_paths": [
+      "state/.gitkeep"
+    ],
+    "mixed_auxiliary_document": {
+      "branch": "kops/cloud-2026-10-12",
+      "baseline_commit": "20720b25af8b0c3cf57e99af9d3241e9fd0e4072",
+      "path": "HUMAN_NEEDED.md",
+      "git_blob_oid": "ddb9ade71d95ad091f4e4b43a38653698ad0d25d",
+      "sha256_raw_git_blob": "8310b3971f111d42110f4d44ffd78cfa0354d4e6deb447aa40f252cf2b480440",
+      "git_author_labels": [
+        "Claude",
+        "KOPS cloud"
+      ],
+      "treatment": "Preserved; maintainer attribution only; excluded from individual authorship and MIT scope."
+    },
+    "generated_runtime_branch": {
+      "branch": "agent-state",
+      "baseline_commit": "7f62f4c64b5048ef34d6ff76c54e9a28dfb7a3b3",
+      "common_ancestor_with_main": false,
+      "paths": [
+        "state/agent_state.json",
+        "state/arxiv_cache.json",
+        "state/post_history.json"
+      ],
+      "treatment": "Unchanged generated JSON runtime state/cache; excluded from MIT scope and excerpt hashing."
+    },
+    "third_party_dependencies": "Not vendored or relicensed; names in requirements.txt are outside this project's license grant."
+  }
+}
