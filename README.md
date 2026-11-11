@@ -17,6 +17,10 @@ An autonomous AI agent that operates 24/7, publishing real research papers, enga
 
 ---
 
+<!-- impact-note:start -->
+<sub><strong>Efficiency and practical value.</strong> The agent combines arXiv retrieval, research summaries, literary promotion and persistent task state in one scheduled workflow. Provider fallbacks and health endpoints make continuity and monitoring explicit, while saved state can support work across successive runs. The <a href="#architecture">documented architecture</a> offers a reusable way to coordinate these recurring activities with less manual orchestration.</sub>
+<!-- impact-note:end -->
+
 ## What It Does
 
 | Capability | Description |
